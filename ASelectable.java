@@ -1,23 +1,29 @@
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 import javafx.scene.Node;
 
 public abstract class ASelectable {
+    protected List<String> atributes;
+    protected List<String> tags;
+    private int id;
 
-    private int ID;
-
-    public ASelectable(int ID) {
-        this.ID = ID;
+    public ASelectable(int id) {
+        atributes  = new ArrayList<>();
+        tags  = new ArrayList<>();
+        this.id = id;
+        atributes.add("id");
     }
     
 
     public int getID() {
-        return ID;
+        return id;
     }
 
     public void setID(int ID) {
-        this.ID = ID;
+        this.id = ID;
     }
     public abstract Node getView();
     public void setData(String arg0, String arg1) {
@@ -54,5 +60,8 @@ public abstract class ASelectable {
             e.printStackTrace();
         }
         return "";
+    }
+    private String CreateXMl(ASelectable as){
+        return null;
     }
 }
