@@ -55,4 +55,7 @@ public abstract class ASelectable {
         }
         return "";
     }
+    private String CreateXMl(ASelectable as){
+        return null;
+    }
 }
