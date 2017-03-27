@@ -7,10 +7,12 @@ import javafx.scene.Node;
 
 public abstract class ASelectable {
     protected List<String> atributes;
+    protected List<String> tags;
     private int id;
 
     public ASelectable(int id) {
         atributes  = new ArrayList<>();
+        tags  = new ArrayList<>();
         this.id = id;
         atributes.add("id");
     }
