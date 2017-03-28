@@ -1,0 +1,18 @@
+Rozpisp prací:
+Jak  to bude vypadat:
+====================
+Datum zadání: ... , 
+!!! 	Do kdy: ... ,Pro koho : ... ,Práce: ..., Stav: ... , Zpráva: ...
+Stavy: ENTER(Zadáno) , ACCEPTED(Vidìl jsem a pracuji na tom), COMPLETED(Dokonèeno), WARN(Nìco nechápu nebo nestíhám).
+[Vykøièníky znaèí, že si nìco udìlal špatnì]
+Pø.:
+Datum zadání: 20.3.2017
+!!! 	Do kdy: 25.3.2017 ,Pro koho : Dan ,Práce: Udìlej to a to, Stav: Accepted , Zpráva: 
+	Do kdy: 28.3.2017 ,Pro koho : Dan ,Práce: Udìlej nìco jiného, Stav: COMPLETED, Zpráva: 
+//Do kdy:  ;Pro koho :  ;Práce: ; Stav: ENTER ; Zpráva: 
+==========================================================================================================================
+Datum zadání: 27.3.2017_
+Do kdy: 2.4.2017 ;Pro koho : Dan ;Práce: Dodìlat do Tøíd reprezentující xml, jejich zpìtné pøedìlání do xml, ; Stav: ACCEPTED; Zpráva:
+Do kdy: 2.4.2017 ;Pro koho : Míra ;Práce: Dokonèit GUI podle návrhového vzoru , Pøidat do BorderPane do centeru ScrollPanel, poskládat komponenty(tøídy reprezentující xml),  Stav: ACCEPTED; Zpráva: návrhový vzdor zde: www.dfgjhnj.wz.cz/NZ.png
+Do kdy: 4.4.2017 ;Pro koho : Míra ;Práce: Dokonèit scénu s možným vytváøením xml (kliknu na tlaèítko pøidat okno -> pøidá se <Window>; do xml) Stav: ACCEPTED; Zpráva: 
+Do kdy: 4.4.2017  ;Pro koho : Dan ;Práce: Vytvoøit WebManager pro možnost naèítání nových jazykù z google pøekladaše; Stav: ACCEPTED; Zpráva: 
