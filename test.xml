@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project id = "1" load="" name="Jmeno" language="CS" fontSize ="1" >
+	<RegsitredLanguage value="CS"/>
+
+	<Window id = "1" load="" name="blablabla">
+		<Panel id = "13453">
+			<Table id = "1" load="" name="" columns="3">
+				<Row id = "1">
+					<Item  dataType="STRING" meter="none" value="asdasdasd"/>
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+				</Row>
+				<Row id = "1">
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+				</Row>
+				<Row id = "1">
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+					<Item  dataType="INT32_T" meter="m/s">1354678</Item>
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+				</Row>
+			</Table>
+			<Table id = "1" load="" name="" columns="3">
+				<Row>
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+				</Row>
+				<Row>
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+				</Row>
+				<Row>
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+					<Item  dataType="INT32_T" meter="m/s">1354678</Item>
+					<Item  dataType="STRING" meter="none">asslasdjasdasdd</Item>
+				</Row>
+			</Table>
+		</Panel>
+	</Window>
+</Project>
