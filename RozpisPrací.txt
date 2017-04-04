@@ -1,18 +1,23 @@
-Rozpisp pracÌ:
+ÔªøRozpisp prac√≠:
 Jak  to bude vypadat:
 ====================
-Datum zad·nÌ: ... , 
-!!! 	Do kdy: ... ,Pro koho : ... ,Pr·ce: ..., Stav: ... , Zpr·va: ...
-Stavy: ENTER(Zad·no) , ACCEPTED(VidÏl jsem a pracuji na tom), COMPLETED(DokonËeno), WARN(NÏco nech·pu nebo nestÌh·m).
-[Vyk¯iËnÌky znaËÌ, ûe si nÏco udÏlal öpatnÏ]
-P¯.:
-Datum zad·nÌ: 20.3.2017
-!!! 	Do kdy: 25.3.2017 ,Pro koho : Dan ,Pr·ce: UdÏlej to a to, Stav: Accepted , Zpr·va: 
-	Do kdy: 28.3.2017 ,Pro koho : Dan ,Pr·ce: UdÏlej nÏco jinÈho, Stav: COMPLETED, Zpr·va: 
-//Do kdy:  ;Pro koho :  ;Pr·ce: ; Stav: ENTER ; Zpr·va: 
+Datum zad√°n√≠: ... , 
+!!! 	Do kdy: ... ,Pro koho : ... ,Pr√°ce: ..., Stav: ... , Zpr√°va: ...
+Stavy: ENTER(Zad√°no) , ACCEPTED(Vidƒõl jsem a pracuji na tom), COMPLETED(Dokonƒçeno), WARN(Nƒõco nech√°pu nebo nest√≠h√°m).
+[Vyk≈ôiƒçn√≠ky znaƒç√≠, ≈æe si nƒõco udƒõlal ≈°patnƒõ]
+P≈ô.:
+Datum zad√°n√≠: 20.3.2017
+!!! 	Do kdy: 25.3.2017 ,Pro koho : Dan ,Pr√°ce: Udƒõlej to a to, Stav: Accepted , Zpr√°va: 
+	Do kdy: 28.3.2017 ,Pro koho : Dan ,Pr√°ce: Udƒõlej nƒõco jin√©ho, Stav: COMPLETED, Zpr√°va: 
+//Do kdy:  ;Pro koho :  ;Pr√°ce: ; Stav: ENTER ; Zpr√°va: 
 ==========================================================================================================================
-Datum zad·nÌ: 27.3.2017_
-Do kdy: 2.4.2017 ;Pro koho : Dan ;Pr·ce: DodÏlat do T¯Ìd reprezentujÌcÌ xml, jejich zpÏtnÈ p¯edÏl·nÌ do xml, ; Stav: ACCEPTED; Zpr·va:
-Do kdy: 2.4.2017 ;Pro koho : MÌra ;Pr·ce: DokonËit GUI podle n·vrhovÈho vzoru , P¯idat do BorderPane do centeru ScrollPanel, poskl·dat komponenty(t¯Ìdy reprezentujÌcÌ xml),  Stav: ACCEPTED; Zpr·va: n·vrhov˝ vzdor zde: www.dfgjhnj.wz.cz/NZ.png
-Do kdy: 4.4.2017 ;Pro koho : MÌra ;Pr·ce: DokonËit scÈnu s moûn˝m vytv·¯enÌm xml (kliknu na tlaËÌtko p¯idat okno -> p¯id· se <Window>; do xml) Stav: ACCEPTED; Zpr·va: 
-Do kdy: 4.4.2017  ;Pro koho : Dan ;Pr·ce: Vytvo¯it WebManager pro moûnost naËÌt·nÌ nov˝ch jazyk˘ z google p¯ekladaöe; Stav: ACCEPTED; Zpr·va: 
+Datum zad√°n√≠: 27.3.2017_
+!!Do kdy: 2.4.2017 ;Pro koho : Dan ;Pr√°ce: Dodƒõlat do T≈ô√≠d reprezentuj√≠c√≠ xml, jejich zpƒõtn√© p≈ôedƒõl√°n√≠ do xml, ; Stav: ACCEPTED; Zpr√°va:
+!!Do kdy: 2.4.2017 ;Pro koho : M√≠ra ;Pr√°ce: Dokonƒçit GUI podle n√°vrhov√©ho vzoru , P≈ôidat do BorderPane do centeru ScrollPanel, poskl√°dat komponenty(t≈ô√≠dy reprezentuj√≠c√≠ xml),  Stav: ACCEPTED; Zpr√°va: n√°vrhov√Ω vzdor zde: www.dfgjhnj.wz.cz/NZ.png
+Do kdy: 4.4.2017 ;Pro koho : M√≠ra ;Pr√°ce: Dokonƒçit sc√©nu s mo≈æn√Ωm vytv√°≈ôen√≠m komponent p≈ôevediteln√Ωch do xml (kliknu na tlaƒç√≠tko p≈ôidat okno -> p≈ôid√° se <Window>; do xml) Stav: ACCEPTED; Zpr√°va: 
+Do kdy: 4.4.2017  ;Pro koho : Dan ;Pr√°ce: Vytvo≈ôit WebManager pro mo≈ænost naƒç√≠t√°n√≠ nov√Ωch jazyk≈Ø z google p≈ôeklada≈°e; Stav: ACCEPTED; Zpr√°va: 
+Datum zad√°n√≠: 2.3.2017
+Do kdy: 11.4.2017 ;Pro koho :Dan  ;Pr√°ce: Anal√Ωza v√Ωƒçtov√Ωch typ≈Ø a stavov√Ωch konstant + dokonceni nestihnute prace; Stav: ENTER ; Zpr√°va: 
+Do kdy: 11.4.2017 ;Pro koho :M√≠ra  ;Pr√°ce: Dokonceni nestihnut√© pr√°ce; Stav: ENTER ; Zpr√°va:
+Do kdy: 16.4.2017 ;Pro koho :Dan,  M√≠ra  ;Pr√°ce: Zaƒç√≠t s implementac√≠ 2. etapy podle analyzy; Stav: ENTER ; Zpr√°va:
+Do kdy: 16.4.2017 ;Pro koho :Dan ;Pr√°ce: Dokonceni spravy gitu, dokonceni specifikace: ENTER ; Zpr√°va:
