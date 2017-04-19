@@ -26,7 +26,6 @@ public class XmlManager {
         } catch (Exception ex) {
             
             Main.getAlert(Alert.AlertType.ERROR, "ERROR", "Nepodařilo se načíst xml",ex.getLocalizedMessage(), null).show();
-            ex.printStackTrace();
         }
         return prj;
     }
@@ -36,7 +35,7 @@ public class XmlManager {
         String language = getATR(node, Constants.language);
         String size = getATR(node, Constants.fontSize);
         Window w  = getWindow(node);
-        return new Project(w.getID(),w.getName(),w.getLoad(),w.getWindow(),w.getPanel(),size,language,regLang);
+        return new Project(w.getID(),w.getName(),w.getLoad(),w.getWindows(),w.getPanel(),size,language,regLang);
     }
     private static  List<String> getRegistredLanguages(NodeList nodeList){
         List<String> list  = new ArrayList<>();

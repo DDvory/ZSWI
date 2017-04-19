@@ -12,9 +12,6 @@ public class Table extends ASelectable {
     private String name;
     private int columnCount;
     private ObservableList<Row> listRow;
-    
-    private Label view_name;
-    private TableView view_table;
 
     public Table(int ID,String name, int columnCount, ObservableList<Row> listRow) {
         super(ID);
@@ -22,10 +19,37 @@ public class Table extends ASelectable {
         this.columnCount = columnCount;
         this.listRow = listRow;
     }
-    @Override
-    public Node getView() {
-        return null;
+
+    public Table(String name, int columnCount, ObservableList<Row> listRow) {
+        this.name = name;
+        this.columnCount = columnCount;
+        this.listRow = listRow;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getColumnCount() {
+        return columnCount;
+    }
+
+    public ObservableList<Row> getListRow() {
+        return listRow;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setColumnCount(int columnCount) {
+        this.columnCount = columnCount;
+    }
+
+    public void setListRow(ObservableList<Row> listRow) {
+        this.listRow = listRow;
+    }
+    
     
     
 }
