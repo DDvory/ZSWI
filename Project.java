@@ -8,25 +8,24 @@ import javafx.scene.control.TreeView;
 
 
 public class Project extends Window {
-	private String fontSize;
+	private int fontSize;
 	private String language;
-	private List<String> registeredLanguages;
 	
 	//bottom language + pisma
 
-    public Project(int ID, String name, Load load, List<Window> window, Panel panel,String fontSize, String language, List<String> registeredLanguages) {
-        super(ID, name, load, window, panel);
+    public Project(int ID, String name, List<Window> window, Panel panel,int fontSize, String language) {
+        super(ID, name, window,null, panel);
         this.fontSize = fontSize;
         this.language = language;
-        this.registeredLanguages = registeredLanguages;
     }
 
-    @Override
-    public Node getView() {
-        TreeItem<Label> treeItem = this.getTreeItem();
-        TreeView<Label> tv = new TreeView(treeItem);
-        return tv;
+    public Project(int fontSize, String language,  String name, Window parent, List<Window> windows, Panel panel) {
+        super(name, parent, windows, panel);
+        this.fontSize = fontSize;
+        this.language = language;
     }
+    
+
     
 
 }
