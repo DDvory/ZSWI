@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 public class Main extends Application{
     private static Main INSTANCE;
     private BorderPane root;
+    private Stage stage;
     public static void main(String[] args) {
         
         Main.launch(args);
@@ -20,12 +21,12 @@ public class Main extends Application{
     @Override
     public void start(Stage stage) throws Exception {
         INSTANCE = this;
+        this.stage=stage;
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         stage.setScene(new Scene(root = new BorderPane()));
         root.setPrefSize(screenSize.width/2, screenSize.height/2);
         ConMenu.setMenu(root);
         stage.show();
-        ConProject.CreateProjectAlert();
     }
     
     public void clearPanel(){
@@ -34,6 +35,10 @@ public class Main extends Application{
 
     public BorderPane getRoot() {
         return root;
+    }
+
+    public Stage getStage() {
+        return stage;
     }
     
     public static Main getINSTANCE() {
@@ -65,6 +70,9 @@ public class Main extends Application{
         node.setOnMouseExited(e->{
         });
     }
-
+     public static interface Observabler {
+        public void notificate();
+        public Node getView();
+    }
 
 }

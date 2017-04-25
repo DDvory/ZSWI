@@ -12,7 +12,7 @@ import javafx.scene.control.Label;
  *
  * @author DDvory
  */
-public class Item extends ASelectable {
+public class Item<T> extends ASelectable {
     private String adress;
     private DataType  type;
     private int dataLen;
@@ -20,25 +20,26 @@ public class Item extends ASelectable {
     private boolean correct;
     private String correctMessage;
     /////////////////////////////
-    BigInteger INT;
+    private BigInteger INT;
     /////////////////////////////
-    String STRING;
-    LocalDate DATE;
-    LocalTime TIME;
-    float FLOAT;
-    double DOUBLE;
-    EnumItem ENUM;
+    private String STRING;
+    private LocalDate DATE;
+    private LocalTime TIME;
+    private float FLOAT;
+    private double DOUBLE;
+    private EnumItem ENUM;
+    
 
     public Item(int id, String adress, String type, int dataLen, String format) {
         super(id);
-        this.adress = adress;
-        this.type = DataType.fromString(type);
-        this.dataLen = dataLen;
-        this.format = format;
+        init(adress, type, dataLen, format);
     }
 
     public Item(String adress, String type, int dataLen, String format) {
         super();
+        init(adress, type, dataLen, format);
+    }
+    private void init(String adress, String type, int dataLen, String format){
         this.adress = adress;
         this.type = DataType.fromString(type);
         this.dataLen = dataLen;
@@ -119,10 +120,9 @@ public class Item extends ASelectable {
             String[] split = string.split(";");
             int a = Integer.decode(split[0]);
             int b = Integer.decode(split[1]);
-            int c = Integer.decode(split[2]);
-            TIME = LocalTime.of(a, b, c);
+            ENUM = new EnumItem(a, b);
         } catch (Exception e) {
-            correction(false,"Špatná data pro čas.");
+            correction(false,"Špatná data pro výčtový typ.");
         }
     }
     public byte[] getData(){
