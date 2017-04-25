@@ -1,4 +1,6 @@
 
+import java.util.ArrayList;
+import java.util.List;
 import javafx.collections.ObservableList;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -11,19 +13,22 @@ import javafx.scene.control.TableView;
 public class Table extends ASelectable {
     private String name;
     private int columnCount;
-    private ObservableList<Row> listRow;
+    private List<Row> listRow;
+    private String[] ColumnNames;
 
-    public Table(int ID,String name, int columnCount, ObservableList<Row> listRow) {
+    public Table(int ID,String name, int columnCount, List<Row> listRow,String[] ColumnNames) {
         super(ID);
-        this.name = name;
-        this.columnCount = columnCount;
-        this.listRow = listRow;
+        init(name, columnCount, listRow,ColumnNames);
     }
 
-    public Table(String name, int columnCount, ObservableList<Row> listRow) {
+    public Table(String name, int columnCount, List<Row> listRow,String[] ColumnNames) {
+        init(name, columnCount, listRow,ColumnNames);
+    }
+    private void init(String name, int columnCount, List<Row> listRow,String[] ColumnNames){
         this.name = name;
+        this.ColumnNames = ColumnNames;
         this.columnCount = columnCount;
-        this.listRow = listRow;
+        this.listRow = listRow==null?new ArrayList<>():listRow;
     }
 
     public String getName() {
@@ -34,14 +39,18 @@ public class Table extends ASelectable {
         return columnCount;
     }
 
-    public ObservableList<Row> getListRow() {
+    public List<Row> getListRow() {
         return listRow;
     }
-
+    
     public void setName(String name) {
         this.name = name;
     }
 
+    public String getColumnNames(int i) {
+        return ColumnNames[i];
+    }
+     
     public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }

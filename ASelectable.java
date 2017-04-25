@@ -10,7 +10,7 @@ public abstract class ASelectable {
     private int ID;
 
     public ASelectable() {
-        this.ID = getIncrementalIdAdd();
+        this(getIncrementalIdAdd());
     }
 
     public ASelectable(int ID) {
