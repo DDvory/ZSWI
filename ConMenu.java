@@ -26,7 +26,7 @@ public class ConMenu {
         MenuItem importItem = new MenuItem("_Importovat Jazyk");
         MenuItem exportItem = new MenuItem("_Exportovat Jazyk");
 
-//        newItem.setOnAction(event -> createTreeItem(null));
+        newItem.setOnAction(event -> ConProject.createProject());
 //        openItem.setOnAction(event -> loadProject());
         //saveItem.setOnAction(event -> );
         //saveAsItem.setOnAction(event -> );
