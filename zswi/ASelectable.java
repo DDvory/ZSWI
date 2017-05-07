@@ -1,3 +1,5 @@
+package zswi;
+
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -14,7 +16,12 @@ public abstract class ASelectable {
     }
 
     public ASelectable(int ID) {
+        if(ID >= incrementalId)incrementalId = ID+1;
         this.ID = ID;
+    }
+    
+    public static void clearIncrement(){
+        incrementalId = 0;
     }
     
 
