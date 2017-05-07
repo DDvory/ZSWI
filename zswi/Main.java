@@ -1,3 +1,5 @@
+package zswi;
+
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -14,6 +16,7 @@ public class Main extends Application{
     private static Main INSTANCE;
     private BorderPane root;
     private Stage stage;
+    private static Project project;
     public static void main(String[] args) {
         
         Main.launch(args);
@@ -44,6 +47,15 @@ public class Main extends Application{
     public static Main getINSTANCE() {
         return INSTANCE;
     }
+
+    public static Project getProject() {
+        return project;
+    }
+
+    public static void setProject(Project project) {
+        Main.project = project;
+    }
+    
     
     public static Alert getAlert(AlertType type, String title, String headerText, String content, Node graphics) {
         Alert tmp = new Alert(type);
@@ -53,26 +65,10 @@ public class Main extends Application{
         tmp.getDialogPane().setContent(graphics);
         return tmp;
     }
-    public static void SetErrorHandler(Node node, Label messageLabel, String text){
-        node.setStyle("-fx-control-inner-background: red");
-        node.setOnMouseEntered(e->{
-            messageLabel.setText("!!! -> "+text);
-        });
-        node.setOnMouseExited(e->{
-            messageLabel.setText("");
-        });
-    }
-    public static void SetUnErrorHandler(Node node, Label messageLabel){
-        node.setStyle("-fx-control-inner-background: white");
-        messageLabel.setText("");
-        node.setOnMouseEntered(e->{
-        });
-        node.setOnMouseExited(e->{
-        });
-    }
+   
      public static interface Observabler {
         public void notificate();
-        public Node getView();
+        public Object getView();
     }
 
 }

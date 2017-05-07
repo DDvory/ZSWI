@@ -1,3 +1,5 @@
+package zswi;
+
 
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
@@ -13,7 +15,7 @@ public class ConMenu {
 
     static void setMenu(BorderPane root) {
         MenuBar menuBar = new MenuBar();
-        menuBar.getMenus().addAll(getFileMenu(), getEditMenu());
+        menuBar.getMenus().addAll(getFileMenu());//, getEditMenu());
         root.setTop(menuBar);
     }
 
@@ -26,7 +28,7 @@ public class ConMenu {
         MenuItem importItem = new MenuItem("_Importovat Jazyk");
         MenuItem exportItem = new MenuItem("_Exportovat Jazyk");
 
-        newItem.setOnAction(event -> ConProject.createProject());
+        newItem.setOnAction(event -> Main.setProject(Project.createProject()));
 //        openItem.setOnAction(event -> loadProject());
         //saveItem.setOnAction(event -> );
         //saveAsItem.setOnAction(event -> );
@@ -40,26 +42,5 @@ public class ConMenu {
         return fileMenu;
     }
 
-    private static Menu getEditMenu() {
-        Menu editMenu = new Menu("_Upravit");
-        MenuItem treeItem = new MenuItem("Přidat _Větev");
-        MenuItem panelItem = new MenuItem("Přidat _Panel");
-        MenuItem tableItem = new MenuItem("Přidat _Tabulku");
-
-        MenuItem treeRemoveItem = new MenuItem("Odebrat Větev");
-        MenuItem panelRemoveItem = new MenuItem("Odebrat Panel");
-
-//        treeItem.setOnAction(event -> createTreeItem(treeView.getSelectionModel().getSelectedItem()));
-//        panelItem.setOnAction(event -> createPanel(treeView.getSelectionModel().getSelectedItem()));
-//        tableItem.setOnAction(event -> addTable(treeView.getSelectionModel().getSelectedItem()));
-//
-//        treeRemoveItem.setOnAction(event -> removeTreeItem(treeView.getSelectionModel().getSelectedItem()));
-//        panelRemoveItem.setOnAction(event -> removePanel(treeView.getSelectionModel().getSelectedItem()));
-
-        editMenu.getItems().addAll(
-                treeItem, panelItem, tableItem, new SeparatorMenuItem(),
-                treeRemoveItem, panelRemoveItem);
-        return editMenu;
-    }
 
 }

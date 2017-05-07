@@ -1,3 +1,5 @@
+package zswi.res;
+
 
 import javafx.scene.image.Image;
 
@@ -6,7 +8,7 @@ import javafx.scene.image.Image;
  * @author DDvory
  */
 public class ResManager {
-    private static String defaultAdress ="/res/";
+    private static String defaultAdress ="/zswi/res/";
     public static Image getImage(String name) {
         Image img = null;
         try {
