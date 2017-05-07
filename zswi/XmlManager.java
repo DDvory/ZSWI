@@ -1,13 +1,13 @@
+package zswi;
+
 
 import java.io.File;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Element;
@@ -35,7 +35,7 @@ public class XmlManager {
         String language = getATR(node, Constants.language);
         String size = getATR(node, Constants.fontSize);
         Window w  = getWindow(node);
-        return new Project(w.getID(),w.getName(),w.getLoad(),w.getWindows(),w.getPanel(),size,language,regLang);
+        return new Project(w.getID(), w.getName(), null, null, 0, language);//,w.getName(),w.getWindows(),w.getPanel(),size,language,regLang);
     }
     private static  List<String> getRegistredLanguages(NodeList nodeList){
         List<String> list  = new ArrayList<>();
@@ -58,7 +58,7 @@ public class XmlManager {
         int ID = getID(node);
         String name  = getATR(node, Constants.name);
         String load = getATR(node,Constants.load);
-        return new Window(ID, name, Load.getLoad(load), list, panel);
+        return new Window(ID, name,  list, panel);
     }
     private static Panel getPanel(Element node)throws WrongArgumentException{
         List<Table> tables = new ArrayList<>();
@@ -75,7 +75,7 @@ public class XmlManager {
         int columns = Integer.valueOf(getATR(node,Constants.columns));
         for (int i = 0; i < rows.getLength(); i++) {
             listRow.add(getRow((Element)rows.item(i), columns));
-        }return new Table(getID(node),getATR(node, Constants.name),columns,listRow);
+        }return new Table(getID(node),getATR(node, Constants.name),columns,listRow,null);
     }
     private static Row getRow(Element node, int len)throws WrongArgumentException{
         NodeList nodeList = node.getElementsByTagName(Constants.Item);
@@ -84,14 +84,14 @@ public class XmlManager {
             Element el = (Element) nodeList.item(i);
             item[i]  = getItem(el);
         }
-        return new Row(getID(node),item);
+        return new Row(getID(node),item,-1);
     }
     private static Item getItem(Element node) throws WrongArgumentException{
         String type = getATR(node,Constants.dataType);
             String meter = getATR(node,Constants.meter);
             int ID = getID(node);
-            Item item  = new Item(ID,type, Meter.getMeter(meter));
-            item.setData(node.getTextContent());
+            Item item  = new Item(ID,"adress",type,0 ,"format");
+            //item.setData(node.getTextContent());
             return item;
     }
     private static int getID(Element el)throws WrongArgumentException{
