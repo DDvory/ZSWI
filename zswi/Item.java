@@ -4,7 +4,7 @@ package zswi;
  *
  * @author DDvory
  */
-public class Item<T> extends ASelectable {
+public class Item<T> extends AFlowable {
     private short adress;
     private ItemManager.DataType  type;
     private int dataLen;
