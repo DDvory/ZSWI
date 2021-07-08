@@ -28,7 +28,7 @@ public class ConMenu {
         MenuItem importItem = new MenuItem("_Importovat Jazyk");
         MenuItem exportItem = new MenuItem("_Exportovat Jazyk");
 
-        newItem.setOnAction(event -> Main.setProject(Project.createProject()));
+        newItem.setOnAction(event -> ProjectManager.createProject());
 //        openItem.setOnAction(event -> loadProject());
         //saveItem.setOnAction(event -> );
         //saveAsItem.setOnAction(event -> );

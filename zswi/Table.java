@@ -12,8 +12,7 @@ import javafx.scene.control.TableView;
  *
  * @author DDvory
  */
-public class Table extends ASelectable {
-    private String name;
+public class Table extends AFlowable {
     private ViewTable vTable;
     private List<Item> listItems;
 
@@ -26,7 +25,7 @@ public class Table extends ASelectable {
         init(name, listRow);
     }
     private void init(String name, List<Item> listRow){
-        this.name = name;
+        super.setName(name);
         this.listItems = listRow==null?new ArrayList<>():listRow;
         vTable = new ViewTable(this);
         vTable.notificate();
@@ -40,16 +39,14 @@ public class Table extends ASelectable {
         listItems.remove(item);
         vTable.notificate();
     }
-    public String getName() {
-        return name;
-    }
 
     public List<Item> getListItems() {
         return listItems;
     }
     
+    @Override
     public void setName(String name) {
-        this.name = name;
+        super.setName(name);
         vTable.notificate();
     } 
 

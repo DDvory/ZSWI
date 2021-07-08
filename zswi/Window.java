@@ -5,8 +5,7 @@ import java.util.List;
 import javafx.scene.control.Alert;
 
 
-public class Window extends ASelectable {
-	private String name;
+public class Window extends AFlowable {
         private ViewWindow vWindow;
         private Window parrent;
 	private List<Window> listWindows;
@@ -23,7 +22,7 @@ public class Window extends ASelectable {
         
     }
     private void init(String name, Window parrent,List<Window> windows, Panel panel){
-        this.name = name;
+        super.setName(name);
         this.listWindows = windows==null?new ArrayList<>():windows;
         this.panel = panel;
         vWindow = new ViewWindow(this);
@@ -41,10 +40,6 @@ public class Window extends ASelectable {
         listWindows.add(wind);
         vWindow.add(wind.getvWindow());
         vWindow.notificate();
-    }
-    
-    public String getName() {
-        return name;
     }
 
     public List<Window> getListWindows() {
@@ -66,11 +61,13 @@ public class Window extends ASelectable {
     }
 
     public void setName(String name) {
-        this.name = name;
+        super.setName(name);
+        vWindow.notificate();
     }
 
     public void setPanel(Panel panel) {
         this.panel = panel;
+        vWindow.notificate();
     } 
 
     public ViewWindow getvWindow() {

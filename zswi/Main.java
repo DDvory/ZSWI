@@ -16,7 +16,6 @@ public class Main extends Application{
     private static Main INSTANCE;
     private BorderPane root;
     private Stage stage;
-    private static Project project;
     public static void main(String[] args) {
         
         Main.launch(args);
@@ -46,14 +45,6 @@ public class Main extends Application{
     
     public static Main getINSTANCE() {
         return INSTANCE;
-    }
-
-    public static Project getProject() {
-        return project;
-    }
-
-    public static void setProject(Project project) {
-        Main.project = project;
     }
     
     
